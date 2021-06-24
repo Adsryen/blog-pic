@@ -1,0 +1,1 @@
+cmd /k "cd /d E:\GitHub Desktop\GitHub\blog-pic&&python pic-marker.py
