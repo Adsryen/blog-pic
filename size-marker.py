@@ -3,7 +3,6 @@ import os
 import sys
 from PIL import Image, ImageFont, ImageDraw
 
-
 def add_watermark(image_file):
     image = Image.open(image_file)
     draw_txt = ImageDraw.Draw(image)
@@ -28,10 +27,11 @@ def add_watermark(image_file):
     new_name = os.path.join('.\output', name)
     image.save(new_name, quality=99)
 
+if __name__ == '__main__':
 
-### 循环读入照片
-files = os.listdir('.\input')
-for file in files:
-    image_file = os.path.join('.\input', file)
-    print(image_file)
-    add_watermark(image_file)
+    ### 循环读入照片
+    files = os.listdir('.\input')
+    for file in files:
+        image_file = os.path.join('.\input', file)
+        print(image_file)
+        add_watermark(image_file)
